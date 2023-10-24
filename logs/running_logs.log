@@ -1,2 +1,549 @@
 [2023-10-24 18:39:22,012:INFO:main:welcone]
 [2023-10-24 18:39:29,712:INFO:main:welcone]
+[2023-10-24 21:01:24,476:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:01:24,476:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:01:24,476:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:01:24,476:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:01:24,476:INFO:common:created directory at: artifacts]
+[2023-10-24 21:01:24,476:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:02:07,382:ERROR:main:<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>]
+Traceback (most recent call last):
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 980, in send
+    self.connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1447, in connect
+    super().connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 844, in create_connection
+    raise err
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+[2023-10-24 21:07:54,736:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:07:54,736:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:07:54,736:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:07:54,736:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:07:54,736:INFO:common:created directory at: artifacts]
+[2023-10-24 21:07:54,736:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:08:37,604:ERROR:main:<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>]
+Traceback (most recent call last):
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 980, in send
+    self.connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1447, in connect
+    super().connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 844, in create_connection
+    raise err
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+[2023-10-24 21:18:21,252:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:18:21,252:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:18:21,252:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:18:21,252:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:18:21,252:INFO:common:created directory at: artifacts]
+[2023-10-24 21:18:21,252:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:18:21,252:ERROR:main:<urlopen error unknown url type: e>]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: e>
+[2023-10-24 21:41:48,695:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:41:48,711:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:41:48,711:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:41:48,711:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:41:48,711:INFO:common:created directory at: artifacts]
+[2023-10-24 21:41:48,711:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:42:31,596:ERROR:main:<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>]
+Traceback (most recent call last):
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 980, in send
+    self.connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1447, in connect
+    super().connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 844, in create_connection
+    raise err
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+[2023-10-24 21:45:45,317:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:45:45,317:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:45:45,317:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:45:45,317:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:45:45,317:INFO:common:created directory at: artifacts]
+[2023-10-24 21:45:45,317:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:45:46,279:INFO:data_ingestion:artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Tue, 24 Oct 2023 16:15:46 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"cfd4e43563c5c881bbcdec054838a544"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.githubcopilot.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events objects-origin.githubusercontent.com *.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ wss://*.actions.githubusercontent.com github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com support.github.com; img-src 'self' data: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=P1d79pM%2FXwpIqOvmCEZmADDxwQrIvMhUQcZOFmeN%2FTHlESXGvuXmJsnmhDTUJ3uDNtPXrko2x%2BrRAEZNO5iqcAHRVhsmLxh2%2FpqlTXDabBFrx6VLJXTdwB8ePx90TieCdDQdxqLw3lP03Cnn2riQ8C0ylRcVEhYMRe6O0XFSLzSCOE%2BA2YZbowhrH7OtRfDVe3vQSi8ayVWX%2FXFJPnYB5LeXjNYRfc2k4BwawTSywsX43H9vXt5NFJJ8opqSpLOU%2FOWvTY4K2FZ%2FW%2F97V%2BpewQ%3D%3D--%2Feo3Cyfi57xv4tAW--jmVZ82wX0J1UBBkupTgYsQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1529905759.1698164146; Path=/; Domain=github.com; Expires=Thu, 24 Oct 2024 16:15:46 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Thu, 24 Oct 2024 16:15:46 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: D235:2BC038:1A75EB:1D5F8C:6537EDB2
+connection: close
+
+]
+[2023-10-24 21:45:46,311:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1266, in __init__
+    self._RealGetContents()
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1333, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-24 21:48:10,804:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:48:10,804:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:48:10,804:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:48:10,804:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:48:10,820:INFO:common:created directory at: artifacts]
+[2023-10-24 21:48:10,820:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:48:10,820:INFO:data_ingestion:File already exists of size: ~ 119 KB]
+[2023-10-24 21:48:10,820:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1266, in __init__
+    self._RealGetContents()
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1333, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-24 21:48:31,990:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:48:31,990:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:48:31,990:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:48:32,006:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:48:32,006:INFO:common:created directory at: artifacts]
+[2023-10-24 21:48:32,006:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:48:32,006:INFO:data_ingestion:File already exists of size: ~ 119 KB]
+[2023-10-24 21:48:32,006:ERROR:main:File is not a zip file]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 36, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1266, in __init__
+    self._RealGetContents()
+  File "E:\Softwares\Anaconda\envs\ML\lib\zipfile.py", line 1333, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2023-10-24 21:49:19,557:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:49:19,557:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:49:19,557:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:49:19,557:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:49:19,557:INFO:common:created directory at: artifacts]
+[2023-10-24 21:49:19,557:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:49:19,557:ERROR:main:<urlopen error unknown url type: e>]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: e>
+[2023-10-24 21:49:57,926:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:49:57,926:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:49:57,926:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:49:57,926:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:49:57,926:INFO:common:created directory at: artifacts]
+[2023-10-24 21:49:57,926:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:50:40,756:ERROR:main:<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>]
+Traceback (most recent call last):
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 980, in send
+    self.connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 1447, in connect
+    super().connect()
+  File "E:\Softwares\Anaconda\envs\ML\lib\http\client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 844, in create_connection
+    raise err
+  File "E:\Softwares\Anaconda\envs\ML\lib\socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+[2023-10-24 21:53:25,020:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:53:25,020:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:53:25,020:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:53:25,020:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:53:25,020:INFO:common:created directory at: artifacts]
+[2023-10-24 21:53:25,020:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:53:25,020:ERROR:main:<urlopen error unknown url type: e>]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "E:\Softwares\Anaconda\envs\ML\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: e>
+[2023-10-24 21:57:40,535:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:57:40,535:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:57:40,535:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:57:40,535:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:57:40,535:INFO:common:created directory at: artifacts]
+[2023-10-24 21:57:40,535:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:57:41,586:INFO:data_ingestion:artifacts/data_ingestion/data.zip download! with following info: 
+Content-Type: application/x-zip-compressed
+Last-Modified: Wed, 07 Oct 2009 14:56:35 GMT
+Accept-Ranges: bytes
+ETag: "8013395d5e47ca1:0"
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+Date: Tue, 24 Oct 2023 16:27:41 GMT
+Connection: close
+Content-Length: 96005
+
+]
+[2023-10-24 21:57:41,600:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-24 21:57:57,113:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 21:57:57,115:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 21:57:57,116:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 21:57:57,118:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 21:57:57,118:INFO:common:created directory at: artifacts]
+[2023-10-24 21:57:57,118:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 21:57:58,342:INFO:data_ingestion:artifacts/data_ingestion/data.zip download! with following info: 
+Content-Type: application/x-zip-compressed
+Last-Modified: Wed, 07 Oct 2009 14:56:35 GMT
+Accept-Ranges: bytes
+ETag: "8013395d5e47ca1:0"
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+Date: Tue, 24 Oct 2023 16:27:58 GMT
+Connection: close
+Content-Length: 96005
+
+]
+[2023-10-24 21:57:58,352:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-24 22:46:50,323:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-24 22:46:50,323:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-24 22:46:50,972:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 22:46:50,976:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:46:50,977:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:46:50,978:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:46:50,978:INFO:common:created directory at: artifacts]
+[2023-10-24 22:46:50,979:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 22:46:50,979:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-24 22:46:50,982:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-24 22:46:50,982:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-24 22:46:50,985:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:46:50,985:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:46:50,987:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:46:50,988:INFO:common:created directory at: artifacts]
+[2023-10-24 22:46:50,988:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-24 22:46:50,988:ERROR:main:__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 23, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+  File "e:\projects\mlops_mlflow-\src\MLProject\config\configuration.py", line 41, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+TypeError: __init__() got an unexpected keyword argument 'STATUS_FILE'
+[2023-10-24 22:50:03,166:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-24 22:50:03,166:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-24 22:50:03,375:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 22:50:03,378:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:50:03,378:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:50:03,380:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:50:03,380:INFO:common:created directory at: artifacts]
+[2023-10-24 22:50:03,381:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 22:50:03,381:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-24 22:50:03,384:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-24 22:50:03,384:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-24 22:50:03,386:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:50:03,387:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:50:03,389:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:50:03,389:INFO:common:created directory at: artifacts]
+[2023-10-24 22:50:03,389:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-24 22:50:03,391:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 23, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 35, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/winequality-red.csv'
+[2023-10-24 22:55:27,333:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-24 22:55:27,333:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-24 22:55:27,547:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-24 22:55:27,554:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:55:27,555:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:55:27,557:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:55:27,557:INFO:common:created directory at: artifacts]
+[2023-10-24 22:55:27,557:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-24 22:55:27,557:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-24 22:55:27,561:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-24 22:55:27,561:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-24 22:55:27,563:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-24 22:55:27,564:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-24 22:55:27,565:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-24 22:55:27,566:INFO:common:created directory at: artifacts]
+[2023-10-24 22:55:27,566:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-24 22:55:27,575:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
