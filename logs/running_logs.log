@@ -547,3 +547,1221 @@ x==========x]
 [2023-10-24 22:55:27,575:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
 
 x==========x]
+[2023-10-26 00:28:48,243:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:28:48,243:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:30:50,091:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:30:50,091:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:33:02,506:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:33:02,506:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:34:13,789:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:34:13,790:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:34:15,343:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:34:15,346:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:34:15,350:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:34:15,355:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:34:15,356:INFO:common:created directory at: artifacts]
+[2023-10-26 00:34:15,356:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:34:15,356:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:34:15,371:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:34:15,372:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:34:15,374:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:34:15,375:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:34:15,377:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:34:15,377:INFO:common:created directory at: artifacts]
+[2023-10-26 00:34:15,377:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:34:15,392:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:34:15,392:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:34:15,396:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:34:15,396:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:34:15,398:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:34:15,399:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:34:15,400:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:34:15,401:INFO:common:created directory at: artifacts]
+[2023-10-26 00:34:15,401:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:34:15,401:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:37:59,222:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:37:59,223:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:38:00,697:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:38:00,699:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:38:00,700:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:38:00,701:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:38:00,702:INFO:common:created directory at: artifacts]
+[2023-10-26 00:38:00,702:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:38:00,702:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:38:00,705:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:38:00,706:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:38:00,708:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:38:00,708:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:38:00,709:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:38:00,710:INFO:common:created directory at: artifacts]
+[2023-10-26 00:38:00,710:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:38:00,718:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:38:00,718:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:38:00,719:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:38:00,719:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:38:00,722:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:38:00,722:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:38:00,724:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:38:00,724:INFO:common:created directory at: artifacts]
+[2023-10-26 00:38:00,724:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:38:00,724:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:39:24,890:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:39:24,890:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:39:26,353:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:39:26,355:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:39:26,356:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:39:26,357:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:39:26,359:INFO:common:created directory at: artifacts]
+[2023-10-26 00:39:26,359:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:39:26,359:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:39:26,363:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:39:26,363:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:39:26,366:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:39:26,366:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:39:26,368:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:39:26,368:INFO:common:created directory at: artifacts]
+[2023-10-26 00:39:26,368:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:39:26,375:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:39:26,377:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:39:26,378:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:39:26,378:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:39:26,380:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:39:26,381:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:39:26,382:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:39:26,383:INFO:common:created directory at: artifacts]
+[2023-10-26 00:39:26,383:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:39:26,383:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:41:32,517:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:41:32,517:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:41:34,020:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:41:34,023:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:41:34,023:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:41:34,025:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:41:34,025:INFO:common:created directory at: artifacts]
+[2023-10-26 00:41:34,025:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:41:34,026:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:41:34,031:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:41:34,031:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:41:34,033:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:41:34,034:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:41:34,035:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:41:34,035:INFO:common:created directory at: artifacts]
+[2023-10-26 00:41:34,035:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:41:34,044:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:41:34,044:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:41:34,047:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:41:34,048:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:41:34,050:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:41:34,050:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:41:34,052:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:41:34,052:INFO:common:created directory at: artifacts]
+[2023-10-26 00:41:34,052:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:41:34,053:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:53:29,651:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:53:29,651:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:53:31,122:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:53:31,124:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:53:31,125:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:53:31,126:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:53:31,127:INFO:common:created directory at: artifacts]
+[2023-10-26 00:53:31,127:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:53:31,127:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:53:31,131:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:53:31,131:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:53:31,133:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:53:31,134:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:53:31,135:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:53:31,136:INFO:common:created directory at: artifacts]
+[2023-10-26 00:53:31,137:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:53:31,144:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:53:31,145:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:53:31,145:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:53:31,146:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:53:31,148:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:53:31,149:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:53:31,150:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:53:31,150:INFO:common:created directory at: artifacts]
+[2023-10-26 00:53:31,151:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:53:31,151:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:54:34,253:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:54:34,253:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:54:35,715:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:54:35,717:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:54:35,718:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:54:35,719:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:54:35,720:INFO:common:created directory at: artifacts]
+[2023-10-26 00:54:35,720:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:54:35,720:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:54:35,724:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:54:35,724:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:54:35,726:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:54:35,726:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:54:35,728:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:54:35,728:INFO:common:created directory at: artifacts]
+[2023-10-26 00:54:35,728:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:54:35,736:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:54:35,737:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:54:35,737:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:54:35,738:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:54:35,740:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:54:35,741:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:54:35,742:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:54:35,743:INFO:common:created directory at: artifacts]
+[2023-10-26 00:54:35,743:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:54:35,744:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:56:19,913:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:56:19,914:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:56:21,414:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:56:21,416:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:56:21,417:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:56:21,418:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:56:21,419:INFO:common:created directory at: artifacts]
+[2023-10-26 00:56:21,419:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:56:21,419:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:56:21,423:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:56:21,423:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:56:21,425:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:56:21,426:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:56:21,428:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:56:21,428:INFO:common:created directory at: artifacts]
+[2023-10-26 00:56:21,428:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:56:21,436:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:56:21,437:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:56:21,438:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:56:21,438:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:56:21,441:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:56:21,441:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:56:21,443:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:56:21,443:INFO:common:created directory at: artifacts]
+[2023-10-26 00:56:21,444:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:56:21,444:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:57:37,519:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:57:37,519:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:57:38,983:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:57:38,986:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:57:38,986:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:57:38,988:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:57:38,988:INFO:common:created directory at: artifacts]
+[2023-10-26 00:57:38,988:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:57:38,988:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:57:38,992:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:57:38,992:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:57:38,994:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:57:38,995:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:57:38,996:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:57:38,997:INFO:common:created directory at: artifacts]
+[2023-10-26 00:57:38,997:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:57:39,005:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:57:39,005:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:57:39,006:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:57:39,006:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:57:39,008:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:57:39,009:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:57:39,011:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:57:39,011:INFO:common:created directory at: artifacts]
+[2023-10-26 00:57:39,012:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:57:39,012:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:58:07,822:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:58:07,822:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:58:09,296:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:58:09,300:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:58:09,300:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:58:09,302:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:58:09,302:INFO:common:created directory at: artifacts]
+[2023-10-26 00:58:09,302:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:58:09,302:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:58:09,306:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:58:09,306:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:58:09,308:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:58:09,309:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:58:09,310:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:58:09,311:INFO:common:created directory at: artifacts]
+[2023-10-26 00:58:09,311:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:58:09,320:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:58:09,320:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:58:09,320:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:58:09,320:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:58:09,323:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:58:09,323:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:58:09,325:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:58:09,325:INFO:common:created directory at: artifacts]
+[2023-10-26 00:58:09,326:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:58:09,326:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 00:59:36,195:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 00:59:36,195:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 00:59:37,676:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 00:59:37,678:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:59:37,678:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:59:37,680:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:59:37,680:INFO:common:created directory at: artifacts]
+[2023-10-26 00:59:37,680:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 00:59:37,680:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 00:59:37,684:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:59:37,684:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 00:59:37,686:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:59:37,688:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:59:37,689:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:59:37,690:INFO:common:created directory at: artifacts]
+[2023-10-26 00:59:37,690:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 00:59:37,698:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:59:37,698:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 00:59:37,699:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 00:59:37,699:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 00:59:37,701:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 00:59:37,702:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 00:59:37,703:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 00:59:37,704:INFO:common:created directory at: artifacts]
+[2023-10-26 00:59:37,704:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 00:59:37,704:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:00:12,596:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:00:12,596:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:00:14,076:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:00:14,078:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:00:14,079:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:00:14,080:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:00:14,081:INFO:common:created directory at: artifacts]
+[2023-10-26 01:00:14,081:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:00:14,081:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:00:14,085:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:00:14,085:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:00:14,087:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:00:14,088:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:00:14,090:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:00:14,090:INFO:common:created directory at: artifacts]
+[2023-10-26 01:00:14,090:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:00:14,098:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:00:14,098:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:00:14,099:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:00:14,099:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:00:14,101:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:00:14,102:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:00:14,104:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:00:14,104:INFO:common:created directory at: artifacts]
+[2023-10-26 01:00:14,104:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:00:14,105:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:01:32,784:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:01:32,785:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:01:34,269:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:01:34,272:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:01:34,273:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:01:34,274:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:01:34,274:INFO:common:created directory at: artifacts]
+[2023-10-26 01:01:34,275:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:01:34,275:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:01:34,278:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:01:34,279:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:01:34,281:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:01:34,282:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:01:34,283:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:01:34,284:INFO:common:created directory at: artifacts]
+[2023-10-26 01:01:34,284:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:01:34,291:ERROR:main:'dict_keys' object is not subscriptable]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 26, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 20, in validate_all_columns
+    if all_cols[0]==all_schema[0]:
+TypeError: 'dict_keys' object is not subscriptable
+[2023-10-26 01:03:07,456:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:03:07,457:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:03:08,923:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:03:08,926:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:03:08,927:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:03:08,929:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:03:08,929:INFO:common:created directory at: artifacts]
+[2023-10-26 01:03:08,929:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:03:08,929:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:03:08,933:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:03:08,933:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:03:08,935:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:03:08,936:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:03:08,937:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:03:08,938:INFO:common:created directory at: artifacts]
+[2023-10-26 01:03:08,938:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:03:08,945:ERROR:main:'dict_keys' object has no attribute 'keys']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 26, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 20, in validate_all_columns
+    if all_cols[0]==all_schema.keys()[0]:
+AttributeError: 'dict_keys' object has no attribute 'keys'
+[2023-10-26 01:03:32,809:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:03:32,809:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:03:34,284:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:03:34,287:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:03:34,288:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:03:34,289:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:03:34,289:INFO:common:created directory at: artifacts]
+[2023-10-26 01:03:34,290:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:03:34,290:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:03:34,293:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:03:34,294:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:03:34,296:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:03:34,296:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:03:34,298:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:03:34,299:INFO:common:created directory at: artifacts]
+[2023-10-26 01:03:34,299:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:03:34,306:ERROR:main:'dict_keys' object is not subscriptable]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 26, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 20, in validate_all_columns
+    if all_cols[0]==all_schema[0]:
+TypeError: 'dict_keys' object is not subscriptable
+[2023-10-26 01:04:01,173:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:04:01,173:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:04:02,641:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:04:02,643:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:04:02,644:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:04:02,645:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:04:02,646:INFO:common:created directory at: artifacts]
+[2023-10-26 01:04:02,646:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:04:02,646:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:04:02,650:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:04:02,650:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:04:02,652:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:04:02,653:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:04:02,654:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:04:02,655:INFO:common:created directory at: artifacts]
+[2023-10-26 01:04:02,655:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:04:02,663:ERROR:main:'dict_keys' object is not subscriptable]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 26, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 38, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 21, in validate_all_columns
+    if all_cols[0]==all_schema[0]:
+TypeError: 'dict_keys' object is not subscriptable
+[2023-10-26 01:05:36,666:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:05:36,666:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:05:38,135:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:05:38,137:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:05:38,139:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:05:38,140:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:05:38,141:INFO:common:created directory at: artifacts]
+[2023-10-26 01:05:38,141:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:05:38,141:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:05:38,145:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:05:38,145:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:05:38,147:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:05:38,147:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:05:38,149:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:05:38,149:INFO:common:created directory at: artifacts]
+[2023-10-26 01:05:38,149:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:05:38,158:ERROR:main:'dict_keys' object is not subscriptable]
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 26, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\data_validation.py", line 20, in validate_all_columns
+    print("22232--- ",all_schema[0])
+TypeError: 'dict_keys' object is not subscriptable
+[2023-10-26 01:06:02,871:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:06:02,871:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:06:04,333:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:06:04,335:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:06:04,336:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:06:04,337:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:06:04,337:INFO:common:created directory at: artifacts]
+[2023-10-26 01:06:04,338:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:06:04,338:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:06:04,341:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:06:04,342:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:06:04,344:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:06:04,344:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:06:04,346:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:06:04,346:INFO:common:created directory at: artifacts]
+[2023-10-26 01:06:04,347:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:06:04,354:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:06:04,354:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:06:04,355:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:06:04,355:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:06:04,358:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:06:04,358:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:06:04,360:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:06:04,360:INFO:common:created directory at: artifacts]
+[2023-10-26 01:06:04,360:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:06:04,361:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:07:06,310:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:07:06,310:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:07:07,795:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:07:07,797:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:07,798:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:07,800:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:07,800:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:07,800:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:07:07,801:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:07:07,804:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:07,804:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:07:07,806:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:07,807:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:07,808:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:07,809:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:07,809:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:07:07,817:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:07,817:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:07:07,818:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:07,819:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:07:07,821:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:07,822:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:07,823:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:07,823:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:07,824:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:07:07,824:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:07:33,895:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:07:33,895:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:07:35,370:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:07:35,373:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:35,374:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:35,375:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:35,375:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:35,376:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:07:35,376:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:07:35,379:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:35,379:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:07:35,382:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:35,382:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:35,384:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:35,384:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:35,384:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:07:35,392:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:35,392:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:07:35,393:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:07:35,393:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:07:35,396:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:07:35,396:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:07:35,398:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:07:35,398:INFO:common:created directory at: artifacts]
+[2023-10-26 01:07:35,398:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:07:35,399:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:08:43,068:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:08:43,068:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:08:44,533:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:08:44,536:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:08:44,537:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:08:44,538:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:08:44,538:INFO:common:created directory at: artifacts]
+[2023-10-26 01:08:44,539:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:08:44,539:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:08:44,543:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:08:44,543:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:08:44,545:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:08:44,546:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:08:44,547:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:08:44,548:INFO:common:created directory at: artifacts]
+[2023-10-26 01:08:44,548:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:08:44,556:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:08:44,556:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:08:44,557:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:08:44,557:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:08:44,559:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:08:44,560:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:08:44,561:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:08:44,562:INFO:common:created directory at: artifacts]
+[2023-10-26 01:08:44,562:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:08:44,562:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:13:00,725:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:13:00,726:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:13:02,228:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:13:02,230:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:13:02,231:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:13:02,232:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:13:02,232:INFO:common:created directory at: artifacts]
+[2023-10-26 01:13:02,233:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:13:02,233:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:13:02,237:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:13:02,237:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:13:02,239:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:13:02,240:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:13:02,241:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:13:02,241:INFO:common:created directory at: artifacts]
+[2023-10-26 01:13:02,242:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:13:02,250:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:13:02,250:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:13:02,251:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:13:02,251:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:13:02,253:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:13:02,254:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:13:02,255:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:13:02,255:INFO:common:created directory at: artifacts]
+[2023-10-26 01:13:02,256:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:13:02,256:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:15:02,354:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:15:02,354:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:15:03,823:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:15:03,825:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:15:03,826:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:15:03,828:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:15:03,828:INFO:common:created directory at: artifacts]
+[2023-10-26 01:15:03,828:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:15:03,828:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:15:03,832:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:15:03,832:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:15:03,834:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:15:03,835:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:15:03,836:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:15:03,837:INFO:common:created directory at: artifacts]
+[2023-10-26 01:15:03,837:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:15:03,846:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:15:03,846:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:15:03,847:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:15:03,847:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:15:03,849:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:15:03,850:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:15:03,852:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:15:03,852:INFO:common:created directory at: artifacts]
+[2023-10-26 01:15:03,852:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:15:03,853:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:19:34,608:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:19:34,608:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:19:36,113:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:19:36,116:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:19:36,116:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:19:36,118:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:19:36,118:INFO:common:created directory at: artifacts]
+[2023-10-26 01:19:36,119:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:19:40,778:INFO:data_ingestion:artifacts/data_ingestion/data.zip download! with following info: 
+Content-Type: application/x-zip-compressed
+Last-Modified: Wed, 07 Oct 2009 14:56:35 GMT
+Accept-Ranges: bytes
+ETag: "8013395d5e47ca1:0"
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+Date: Wed, 25 Oct 2023 19:49:41 GMT
+Connection: close
+Content-Length: 96005
+
+]
+[2023-10-26 01:19:40,805:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:19:40,806:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:19:40,811:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:19:40,813:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:19:40,817:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:19:40,817:INFO:common:created directory at: artifacts]
+[2023-10-26 01:19:40,818:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:19:40,830:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:19:40,831:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:19:40,832:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:19:40,832:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:19:40,836:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:19:40,837:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:19:40,839:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:19:40,840:INFO:common:created directory at: artifacts]
+[2023-10-26 01:19:40,840:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:19:40,841:ERROR:main:[Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "E:\Projects\MLOPS_MLFLOW-\main.py", line 51, in <module>
+    data_ingestion.main()
+  File "E:\Projects\MLOPS_MLFLOW-\src\MLProject\pipeline\stage_04_model_trainer.py", line 17, in main
+    model_trainer_config.train()
+  File "e:\projects\mlops_mlflow-\src\MLProject\components\model_trainer.py", line 16, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\parsers\readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\madhu\AppData\Roaming\Python\Python39\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2023-10-26 01:20:37,905:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:20:37,906:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:20:39,379:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:20:39,381:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:20:39,382:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:20:39,384:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:20:39,384:INFO:common:created directory at: artifacts]
+[2023-10-26 01:20:39,384:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:20:39,385:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:20:39,388:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:20:39,388:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:20:39,391:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:20:39,391:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:20:39,393:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:20:39,393:INFO:common:created directory at: artifacts]
+[2023-10-26 01:20:39,394:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:20:39,399:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:20:39,399:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:20:39,405:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:20:39,406:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:20:39,407:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:20:39,408:INFO:common:created directory at: artifacts]
+[2023-10-26 01:20:39,408:INFO:common:created directory at: artifacts/data_transformation]
+[2023-10-26 01:20:39,427:INFO:data_transformation:Splited data into training and test sets]
+[2023-10-26 01:20:39,427:INFO:data_transformation:(1199, 12)]
+[2023-10-26 01:20:39,428:INFO:data_transformation:(400, 12)]
+[2023-10-26 01:20:39,428:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:20:39,428:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:20:39,431:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:20:39,431:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:20:39,433:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:20:39,433:INFO:common:created directory at: artifacts]
+[2023-10-26 01:20:39,433:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:20:39,459:INFO:main:>>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:20:39,460:INFO:main:>>>>>> stage Model evaluation stage started <<<<<<]
+[2023-10-26 01:20:39,462:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:20:39,463:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:20:39,464:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:20:39,464:INFO:common:created directory at: artifacts]
+[2023-10-26 01:20:39,465:INFO:common:created directory at: artifacts/model_evaluation]
+[2023-10-26 01:20:42,632:INFO:common:json file saved at: artifacts\model_evaluation\metrics.json]
+[2023-10-26 01:21:27,875:INFO:main:>>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:24:58,385:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:24:58,386:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:24:59,856:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:24:59,859:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:24:59,860:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:24:59,861:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:24:59,861:INFO:common:created directory at: artifacts]
+[2023-10-26 01:24:59,862:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:24:59,862:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:24:59,865:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:24:59,865:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:24:59,867:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:24:59,868:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:24:59,869:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:24:59,870:INFO:common:created directory at: artifacts]
+[2023-10-26 01:24:59,870:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:24:59,875:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:24:59,875:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:24:59,878:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:24:59,879:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:24:59,881:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:24:59,881:INFO:common:created directory at: artifacts]
+[2023-10-26 01:24:59,882:INFO:common:created directory at: artifacts/data_transformation]
+[2023-10-26 01:24:59,894:INFO:data_transformation:Splited data into training and test sets]
+[2023-10-26 01:24:59,895:INFO:data_transformation:(1199, 12)]
+[2023-10-26 01:24:59,895:INFO:data_transformation:(400, 12)]
+[2023-10-26 01:24:59,895:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:24:59,896:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:24:59,898:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:24:59,899:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:24:59,900:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:24:59,900:INFO:common:created directory at: artifacts]
+[2023-10-26 01:24:59,900:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:24:59,921:INFO:main:>>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:24:59,921:INFO:main:>>>>>> stage Model evaluation stage started <<<<<<]
+[2023-10-26 01:24:59,924:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:24:59,924:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:24:59,925:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:24:59,925:INFO:common:created directory at: artifacts]
+[2023-10-26 01:24:59,925:INFO:common:created directory at: artifacts/model_evaluation]
+[2023-10-26 01:25:04,973:INFO:common:json file saved at: artifacts\model_evaluation\metrics.json]
+[2023-10-26 01:25:31,588:INFO:main:>>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:26:54,850:INFO:utils:Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-10-26 01:26:54,851:INFO:utils:NumExpr defaulting to 8 threads.]
+[2023-10-26 01:26:56,510:INFO:main:>>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-26 01:26:56,513:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:26:56,519:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:26:56,520:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:26:56,521:INFO:common:created directory at: artifacts]
+[2023-10-26 01:26:56,522:INFO:common:created directory at: artifacts/data_ingestion]
+[2023-10-26 01:26:56,522:INFO:data_ingestion:File already exists of size: ~ 94 KB]
+[2023-10-26 01:26:56,525:INFO:main:>>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:26:56,525:INFO:main:>>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-26 01:26:56,528:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:26:56,528:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:26:56,530:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:26:56,530:INFO:common:created directory at: artifacts]
+[2023-10-26 01:26:56,530:INFO:common:created directory at: artifacts/data_validation]
+[2023-10-26 01:26:56,538:INFO:main:>>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:26:56,538:INFO:main:>>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-26 01:26:56,541:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:26:56,542:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:26:56,544:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:26:56,544:INFO:common:created directory at: artifacts]
+[2023-10-26 01:26:56,544:INFO:common:created directory at: artifacts/data_transformation]
+[2023-10-26 01:26:56,559:INFO:data_transformation:Splited data into training and test sets]
+[2023-10-26 01:26:56,559:INFO:data_transformation:(1199, 12)]
+[2023-10-26 01:26:56,559:INFO:data_transformation:(400, 12)]
+[2023-10-26 01:26:56,560:INFO:main:>>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:26:56,560:INFO:main:>>>>>> stage Model Trainer stage started <<<<<<]
+[2023-10-26 01:26:56,562:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:26:56,562:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:26:56,564:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:26:56,565:INFO:common:created directory at: artifacts]
+[2023-10-26 01:26:56,565:INFO:common:created directory at: artifacts/model_trainer]
+[2023-10-26 01:26:56,587:INFO:main:>>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-10-26 01:26:56,587:INFO:main:>>>>>> stage Model evaluation stage started <<<<<<]
+[2023-10-26 01:26:56,589:INFO:common:yaml file: config\config.yaml loaded successfully]
+[2023-10-26 01:26:56,591:INFO:common:yaml file: params.yaml loaded successfully]
+[2023-10-26 01:26:56,592:INFO:common:yaml file: schema.yaml loaded successfully]
+[2023-10-26 01:26:56,592:INFO:common:created directory at: artifacts]
+[2023-10-26 01:26:56,592:INFO:common:created directory at: artifacts/model_evaluation]
+[2023-10-26 01:26:57,812:INFO:common:json file saved at: artifacts\model_evaluation\metrics.json]
+[2023-10-26 01:27:17,768:INFO:main:>>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]

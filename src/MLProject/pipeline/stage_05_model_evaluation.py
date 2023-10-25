@@ -1,6 +1,6 @@
-from mlProject.config.configuration import ConfigurationManager
-from mlProject.components.model_evaluation import ModelEvaluation
-from mlProject import logger
+from MLProject.config.configuration import ConfigurationManager
+from MLProject.components.model_evaluation import ModelEvaluation
+from MLProject import logger
 
 STAGE_NAME = "Model evaluation stage"
 
